@@ -1,53 +1,51 @@
 #include <iostream>
 using namespace std;
-
 int main() {
     char c; // To hold response
-    bool run = true;
-    while(run) {
+    while(true) {
 	cout << "MAIN MENU:" << endl;
 	cout << "l: left, r: right, q: quit -> ";
 	cin >> c;
-	switch(c){
-	case 'q':
-	    run = false;
-	    break;
-	case 'l': 
+	if(c == 'q')
+	    break; // Out of "while(1)"
+	if(c == 'l') {
 	    cout << "LEFT MENU:" << endl;
 	    cout << "select a or b: ";
 	    cin >> c;
-	    switch(c){
-	    case 'a':
+	    if(c == 'a') {
 		cout << "you chose 'a'" << endl;
 		continue; // Back to main menu
-	    case 'b':
+	    }
+	    if(c == 'b') {
 		cout << "you chose 'b'" << endl;
 		continue; // Back to main menu
-	    default:
+	    }
+	    else {
 		cout << "you didn't choose a or b!"
 		     << endl;
 		continue; // Back to main menu
 	    }
-	case 'r':
+	}
+	if(c == 'r') {
 	    cout << "RIGHT MENU:" << endl;
 	    cout << "select c or d: ";
 	    cin >> c;
-	    switch(c){
-	    case 'c':
+	    if(c == 'c') {
 		cout << "you chose 'c'" << endl;
 		continue; // Back to main menu
-	    case 'd':
-		cout << "you chose 'd'" << endl;
+	    }
+	    if(c == 'd') {
+	    3: The C in C++
+		    133cout << "you chose 'd'" << endl;
 		continue; // Back to main menu
-	    default:
+	    }
+	    else {
 		cout << "you didn't choose c or d!"
 		     << endl;
 		continue; // Back to main menu
 	    }
-	default:
-	    cout << "you must type l or r or q!" << endl;   
 	}
-	cout << "quitting menu..." << endl;
+	cout << "you must type l or r or q!" << endl;
     }
-}
-
+    cout << "quitting menu..." << endl;
+} ///:~

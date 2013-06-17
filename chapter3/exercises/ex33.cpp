@@ -1,0 +1,2 @@
+float (*(*ptr)(int))(char);
+
